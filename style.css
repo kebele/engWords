@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Roboto+Mono&display=swap');
+
+body {
+    text-align: center;
+    background: #D5DBDB;
+    font-family: 'Arvo', serif;
+    font-size: 25px;
+    margin : 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container {
+    
+    margin : auto;
+    width :100%;
+    
+}
+
+form {
+    display : none
+}
+
+img {
+    height: auto;
+    width: 25vh;
+    padding: 3px;
+    margin: 5px;
+	box-sizing: border-box;
+	border-radius : 10px;
+    box-shadow : 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* AŞAĞISI MODAL İLE İLGiLİ */
+
+.button {
+    background: coral;
+    padding: 1em 2em; /* 1em top, bottom, 2 em left and right */
+    color: white;
+    border : 0;
+    display: none;
+}
+
+button:hover {
+    background: black;
+}
+
+.modal {
+    display : none;
+    position: fixed;
+    z-index: 1;
+    left: 0; 
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);	
+}
+
+.modal-content {
+     background-color: #D6E2D5;
+     margin : 20% auto;/* top bottom and left right */
+     width: 40%;
+     /* width : 400px; */
+     box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2), 0 7px 10px 0 rgba(0,0,0,0.17);
+     animation-name: modalopen;
+     animation-duration: 0.3s;
+}
+
+.resimX img {
+    width: 90%;
+    height: auto;    
+}
+
+.modal-header {
+    background-color: #3B5998;
+    padding: 10px;
+    color : white
+}
+
+.modal-header h2, .modal-footer h2 {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 10px 10px;
+}
+
+.modal-footer {
+    background:crimson;
+    padding: 10px;
+    color: white;
+}
+
+.closeBtn {
+    display: none;
+    color : white;
+    float : right; /* to the right */
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color : #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+      width : 70%;
+    }
+  }
