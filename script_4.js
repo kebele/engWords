@@ -3,6 +3,7 @@
 const textInput = document.getElementById('text-input');
 const buton = document.getElementById('buton');
 const synth = window.speechSynthesis;
+const modalBody = document.querySelector('.modal-body');
 
 //tıkladığım yerin id sini alacak,
 document.querySelector('.area').addEventListener('click', idAl);
@@ -211,4 +212,13 @@ function clickOutside(e){
     }
 }
 
-
+modalBody.addEventListener('click', function(e){	
+    let x = textInput.textContent = e.target["id"];    
+    if(x==""){return;}
+    const utterance = new SpeechSynthesisUtterance(x)
+    utterance.lang = 'en-GB';
+    utterance.volume = 0.9;
+    utterance.rate = 0.87;
+   speechSynthesis.speak(utterance);
+}
+)
